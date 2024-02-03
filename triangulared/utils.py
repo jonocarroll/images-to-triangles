@@ -26,7 +26,7 @@ def get_triangle_colour(triangles, image, agg_func=np.median):
         "b": image.reshape(-1, 3)[:, 2]
     })
 
-    n_triangles = triangles.vertices.shape[0]
+    n_triangles = triangles.simplices.shape[0]
 
     by_triangle = (
         df

@@ -15,7 +15,7 @@ def process(input_path, output_path, n_points):
     fig, ax = plt.subplots()
     ax.invert_yaxis()
     triangle_colours = get_triangle_colour(tri, image)
-    draw_triangles(ax, tri.points, tri.vertices, triangle_colours)
+    draw_triangles(ax, tri.points, tri.simplices, triangle_colours)
 
     # remove boundary
     ax.axis("tight")

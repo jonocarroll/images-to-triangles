@@ -85,7 +85,8 @@ def generate_max_entropy_points(image, n_points=100,
 
     # filter
     im2 = (
-        255 * filters.gaussian(im2, sigma=filter_width, multichannel=True)
+    #    255 * filters.gaussian(im2, sigma=filter_width, multichannel=True)
+        255 * filters.gaussian(im2, sigma=filter_width)
     ).astype("uint8")
 
     # calculate entropy
